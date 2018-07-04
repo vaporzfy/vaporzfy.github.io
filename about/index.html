@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="关于我"><meta name="keywords" content=""><meta name="author" content="vaporzfy,undefined"><meta name="copyright" content="vaporzfy"><title>关于我 | vaporzfy's Notes</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/black.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/css/zenburn.min.css"></head><body><div class="reveal"><div class="slides"><section data-markdown data-separator="===" data-separator-vertical="==" data-charset="utf-8"><script type="text/template">
+## AboutMe
+
+==
+
+关于对开源的新感悟：
+* 开始一个开源项目其实很简单，找一些自己在做项目时遇到的费事费时的小细节做好，然后开源就可以了。
+* 比起技术能力，更多的是“来自于真实的需求”以及“持续更新的毅力”，这就是做好开源项目的秘诀。
+
+==
+
+```python
+@dataclass
+class Me:
+    name: 'vaporzfy'
+    intro: '互联网的小蜜蜂，不务正业的程序员，热衷于新技术，同时也怀旧。'
+    favourite: ['c/c++', 'python']
+    ...
+```
+
+==
+
+[返回首页-vaporzfy's Notes](http://vaporzfy.top)</script></section></div></div><script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/js/head.min.js"></script><script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.js"></script><script>Reveal.initialize({
+  mouseWheel: false,
+  transition: 'slide',
+  transitionSpeed: 'default',
+  parallaxBackgroundImage: '',
+  parallaxBackgroundSize: '',
+  parallaxBackgroundHorizontal: '',
+  parallaxBackgroundVertical: '',
+  markdown: {
+    smartypants: true
+  },
+  dependencies: [
+    { src: '/js/third-party/reveal/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    { src: '/js/third-party/reveal/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+    // Syntax highlight for <code> elements
+    { src: '/js/third-party/reveal/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+    // Zoom in and out with Alt+click
+    { src: '/js/third-party/reveal/zoom.min.js', async: true },
+    // Speaker notes
+    { src: '/js/third-party/reveal/notes.min.js', async: true },
+    // MathJax
+    { src: '/js/third-party/reveal/math.min.js', async: true }
+  ]
+});</script></body></html>
