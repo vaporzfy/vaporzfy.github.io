@@ -1,0 +1,206 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="asciidoctor-reveal.js的简单使用"><meta name="keywords" content="asciidoc"><meta name="author" content="vaporzfy,undefined"><meta name="copyright" content="vaporzfy"><title>asciidoctor-reveal.js的简单使用 | vaporzfy's Notes</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.5.6"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.5.6"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/gh/upupming/gitalk@36368e5dffd049e956cdbbd751ff96c28d8255cf/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4a730a1dbeaefa7cb235a94fc1b70e5d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装"><span class="toc-text">1. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-简单使用"><span class="toc-text">2. 简单使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-常见的语法设置"><span class="toc-text">3. 常见的语法设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-隐藏标题"><span class="toc-text">3.1 隐藏标题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-背景颜色"><span class="toc-text">3.2 背景颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-背景图片"><span class="toc-text">3.3 背景图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-背景视频"><span class="toc-text">3.4 背景视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-Background-iframes"><span class="toc-text">3.5 Background iframes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-过渡效果"><span class="toc-text">3.6 过渡效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-逐条显示"><span class="toc-text">3.7 逐条显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-Stretch"><span class="toc-text">3.8 Stretch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-9-插入视频"><span class="toc-text">3.9 插入视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-10-语法高亮"><span class="toc-text">3.10 语法高亮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-11-幻灯片布局"><span class="toc-text">3.11 幻灯片布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-12-Title-slide-customization"><span class="toc-text">3.12 Title slide customization</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-13-Admonitions"><span class="toc-text">3.13 Admonitions</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Reveal-js-Options"><span class="toc-text">4. Reveal.js Options</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://raw.githubusercontent.com/pymilk/data/master/images/X.jpg"></div><div class="author-info__name text-center">vaporzfy</div><div class="author-info__description text-center">推动社会经济发展的不是数据，而是数据背后的算法。</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">10</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">12</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">7</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container" style="background-image: url(true)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">vaporzfy's Notes</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">首页</a><a class="site-page" href="/archives">我的笔记</a><a class="site-page" href="/tags">标签云</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/categories/soup">鸡汤</a><a class="site-page" href="/about">关于我</a></span></div><div id="post-info"><div id="post-title">asciidoctor-reveal.js的简单使用</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-04-21</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/efficiency/">efficiency</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">1,369</span><span class="post-meta__separator">|</span><span>阅读时长: 5 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p><strong>请根据笔记的写作日期，选择性阅读。</strong></p>
+<blockquote>
+<p><strong>作者：</strong> <a href="http://vaporzfy.top/">vaporzfy</a><br><strong>写作日期：</strong> 2018-04-15<br><strong>系统：</strong> Mac<br><strong>软件版本：</strong><br><a href="mailto:node@9.11.1" target="_blank" rel="noopener">node@9.11.1</a><br><a href="mailto:asciidoctor-reveal.js@1.1.3" target="_blank" rel="noopener">asciidoctor-reveal.js@1.1.3</a><br><strong>参考：</strong><br><a href="https://github.com/asciidoctor/asciidoctor-reveal.js" target="_blank" rel="noopener">asciidoctor-reveal.js</a><br><strong>分类：</strong> efficiency &gt; asciidoc</p>
+</blockquote>
+<hr>
+<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><p>不会nodejs，尝试过全局安装，未果。以下采用本地安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save asciidoctor-reveal.js</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2-简单使用"><a href="#2-简单使用" class="headerlink" title="2. 简单使用"></a>2. 简单使用</h2><ol>
+<li><p>新建文件asciidoctor-revealjs.js，内容如下：</p>
+<blockquote>
+<p>asciidoctor-revealjs.js</p>
+</blockquote>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Load asciidoctor.js and asciidoctor-reveal.js</span></span><br><span class="line"><span class="keyword">var</span> asciidoctor = <span class="built_in">require</span>(<span class="string">'asciidoctor.js'</span>)();</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'asciidoctor-reveal.js'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Convert the document 'presentation.adoc' using the reveal.js converter</span></span><br><span class="line"><span class="keyword">var</span> attributes = &#123;<span class="string">'revealjsdir'</span>: <span class="string">'node_modules/reveal.js@'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> options = &#123;<span class="attr">safe</span>: <span class="string">'safe'</span>, <span class="attr">backend</span>: <span class="string">'revealjs'</span>, <span class="attr">attributes</span>: attributes&#125;;</span><br><span class="line">asciidoctor.convertFile(<span class="string">'presentation.ad'</span>, options); <span class="comment">// &lt;1&gt;</span></span><br></pre></td></tr></table></figure>
+<p> <1> presentation.ad为你需要转换的ad文件</1></p>
+</li>
+</ol>
+<ol start="2">
+<li><p>新建presentation.ad文件，内容如下：</p>
+<blockquote>
+<p>presentation.ad</p>
+</blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">= Title Slide</span><br><span class="line"></span><br><span class="line">== Slide One</span><br><span class="line"></span><br><span class="line">* Foo</span><br><span class="line">* Bar</span><br><span class="line">* World</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行上一步编写的js文件</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node asciidoctor-revealjs.js</span><br></pre></td></tr></table></figure>
+<p> 之后在当前目录下就会生成一个渲染后的与ad文件同名的html文件，上面例子生成的文件为presentation.html。运行该html文件就能预览到幻灯片的效果。</p>
+<blockquote>
+<p><strong>注意：该文件不能脱离当前目录运行，它依赖node_modules下的reveal.js。</strong></p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h2 id="3-常见的语法设置"><a href="#3-常见的语法设置" class="headerlink" title="3. 常见的语法设置"></a>3. 常见的语法设置</h2><h3 id="3-1-隐藏标题"><a href="#3-1-隐藏标题" class="headerlink" title="3.1 隐藏标题"></a>3.1 隐藏标题</h3><ol>
+<li><p>设置标题为!</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">== !</span><br><span class="line"></span><br><span class="line"> !</span><br><span class="line">这一页我没有标题</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加notitle属性</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[%notitle]</span><br><span class="line">== 我是标题</span><br><span class="line"></span><br><span class="line">notitle</span><br><span class="line">这一页我没有标题</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>增加conceal属性</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[%conceal]</span><br><span class="line">== 我是标题</span><br><span class="line"></span><br><span class="line">conceal</span><br><span class="line">这一页我没有标题</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意：notitle只可对单一页面设置，一级标题也是一个单一页面。</strong></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="3-2-背景颜色"><a href="#3-2-背景颜色" class="headerlink" title="3.2 背景颜色"></a>3.2 背景颜色</h3><ol>
+<li><p>单一页面<br>通过background-color属性设置该页的背景颜色，设置后，相应的字体颜色也会改变为不影响阅读字体颜色。比如，红色背景-白色字体。</p>
+</li>
+<li><p>所有页面<br>如果设置在一级标题下，将会应用于所有幻灯片，但是如果二级标题有设置背景颜色，则生效的是二级标题的背景颜色。（可以类比编程中的全局变量和局部变量）</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[background-color=&quot;yellow&quot;] // &lt;1&gt;</span><br><span class="line">== Slide Three</span><br><span class="line"></span><br><span class="line">Is very yellow</span><br></pre></td></tr></table></figure>
+<p> <1> 通过颜色字符串设置背景颜色 </1></p>
+</li>
+</ol>
+<h3 id="3-3-背景图片"><a href="#3-3-背景图片" class="headerlink" title="3.3 背景图片"></a>3.3 背景图片</h3><p>通过background-image属性设置该页的背景图片，默认的字体颜色为白色，默认采用cover的全屏方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">== 背景图片</span><br><span class="line"></span><br><span class="line">Is very red</span><br><span class="line"></span><br><span class="line">image::001.jpg[background, size=&quot;200px 200px&quot;, repeat=&quot;repeat&quot;] // &lt;1&gt;</span><br></pre></td></tr></table></figure>
+<p><1> background可使用关键字canvas替代，将图片大小设置为200*200，重复的平铺方式。</1></p>
+<p>可以设置的属性有：</p>
+<p>表X.背景图标的属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>可选值</th>
+<th>示例</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>cover, contain</td>
+<td>size=”200px 200px”</td>
+<td>设置图片大小，默认为cover的全屏方式</td>
+</tr>
+<tr>
+<td>position</td>
+<td></td>
+<td>设置未成功生效</td>
+<td>设置图片位置</td>
+</tr>
+<tr>
+<td>repeat</td>
+<td>norepeat, repeat</td>
+<td>repeat=”repeat”</td>
+<td>重复图片</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注意：</strong></p>
+<p><strong>1. 背景图片的相对路径依赖于imagedir属性的设置。</strong><br><strong>2. background可使用关键字canvas替代。</strong><br><strong>3. 设置图片属性的关键字没有前缀background。</strong><br><strong>4. 目前设置只针对单一页面生效，所有页面的设置方法还未找到。</strong><br><strong>5. position属性设置并未生效，不知道是不是我设置的不对。</strong></p>
+</blockquote>
+<h3 id="3-4-背景视频"><a href="#3-4-背景视频" class="headerlink" title="3.4 背景视频"></a>3.4 背景视频</h3><p>通过background-video属性设置该页的背景视频，默认的字体颜色为白色，默认采用cover的全屏方式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[background-video=&quot;001.mp4&quot;,background-video-loop=true,background-video-muted=true] // &lt;1&gt;</span><br><span class="line">== 背景视频</span><br></pre></td></tr></table></figure>
+<p><1> 设置视频为循环播放，且没有声音。上例中的属性设置可以简写为options=”loop,muted”。</1></p>
+<p>可以设置的属性有：<br>表X.背景图片的属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>可选值</th>
+<th>示例</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>cover, contain</td>
+<td>size=cover</td>
+<td>设置视频大小，默认为cover的全屏方式</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>True,false</td>
+<td>background-video-loop=true</td>
+<td>设置视频循环播放</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>true, false</td>
+<td>background-video-muted=true</td>
+<td>设置视频是否需要声音</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>注意：设置视频属性的关键字没有前缀background。</strong></p>
+</blockquote>
+<h3 id="3-5-Background-iframes"><a href="#3-5-Background-iframes" class="headerlink" title="3.5 Background iframes"></a>3.5 Background iframes</h3><p>通过background-iframe属性设置，具体的没有做过尝试。</p>
+<h3 id="3-6-过渡效果"><a href="#3-6-过渡效果" class="headerlink" title="3.6 过渡效果"></a>3.6 过渡效果</h3><ol>
+<li><p>切换效果</p>
+<p>通过属性transition设置，可设置的值为zoom、slide、slide-in fade-out等。</p>
+</li>
+<li><p>切换速度</p>
+<p>通过属性transition-speed设置，可设置的值为default、fast、slow等。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[transition=zoom]</span><br><span class="line">== 切换效果</span><br><span class="line"></span><br><span class="line">使用zoom效果切换</span><br><span class="line"></span><br><span class="line">[transition-speed=fast]</span><br><span class="line">== 切换速度</span><br><span class="line"></span><br><span class="line">使用fast速度切换</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="3-7-逐条显示"><a href="#3-7-逐条显示" class="headerlink" title="3.7 逐条显示"></a>3.7 逐条显示</h3><p>通过属性.step或%step设置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">== 逐步显示</span><br><span class="line"></span><br><span class="line">[.step]</span><br><span class="line">* Foo</span><br><span class="line">* Bar</span><br><span class="line">* World</span><br></pre></td></tr></table></figure>
+<h3 id="3-8-Stretch"><a href="#3-8-Stretch" class="headerlink" title="3.8 Stretch"></a>3.8 Stretch</h3><p>尽可能的使某一元素多占空间，比如图片、视频等等。</p>
+<h3 id="3-9-插入视频"><a href="#3-9-插入视频" class="headerlink" title="3.9 插入视频"></a>3.9 插入视频</h3><p>属性同asciidoc的video。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">== 插入视频</span><br><span class="line"></span><br><span class="line">video::kZH9JtPBq7k[youtube, start=34, options=autoplay]</span><br></pre></td></tr></table></figure>
+<h3 id="3-10-语法高亮"><a href="#3-10-语法高亮" class="headerlink" title="3.10 语法高亮"></a>3.10 语法高亮</h3><p>通过属性source-highlighter设置，reveal.js默认支持highlightjs，其它风格不确定是否支持。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">= 设置语法高亮风格</span><br><span class="line">:source-highlighter: highlightjs</span><br></pre></td></tr></table></figure>
+<h3 id="3-11-幻灯片布局"><a href="#3-11-幻灯片布局" class="headerlink" title="3.11 幻灯片布局"></a>3.11 幻灯片布局</h3><ol>
+<li><p>水平布局 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">==</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>垂直布局</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">===</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="3-12-Title-slide-customization"><a href="#3-12-Title-slide-customization" class="headerlink" title="3.12 Title slide customization"></a>3.12 Title slide customization</h3><p>The title slide is customized via Asciidoc attributes. These are the global variable assigned at the top of a document under the lead title that look like this: :name: value.</p>
+<p>This converter supports changing the color, image, video, iframe and transitions of the title slide.</p>
+<p>Read the relevant reveal.js documentation to understand what attributes need to be set. Keep in mind that for title slides you must replace data- with title-slide-.</p>
+<p>See title-slide-image.adoc.</p>
+<p>The title slide is also added a title CSS class to help with template customization.</p>
+<h3 id="3-13-Admonitions"><a href="#3-13-Admonitions" class="headerlink" title="3.13 Admonitions"></a>3.13 Admonitions</h3><p>全局属性设置为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:icons: font</span><br></pre></td></tr></table></figure></p>
+<p>设置后才能使用Admonitions图标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">== 图标</span><br><span class="line"></span><br><span class="line">TIP: icons slide</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="4-Reveal-js-Options"><a href="#4-Reveal-js-Options" class="headerlink" title="4. Reveal.js Options"></a>4. Reveal.js Options</h2><p>详见<a href="https://github.com/asciidoctor/asciidoctor-reveal.js/#revealjs-options" target="_blank" rel="noopener">Reveal.js Options</a></p>
+<p>&lt;完&gt;</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">vaporzfy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://vaporzfy.top/2018/04/21/efficiency/asciidoc/asciidoctor-reveal.js/">http://vaporzfy.top/2018/04/21/efficiency/asciidoc/asciidoctor-reveal.js/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://vaporzfy.top" target="_blank">vaporzfy's Notes</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/asciidoc/">asciidoc</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://raw.githubusercontent.com/pymilk/data/master/images/wxpay.png"><div class="post-qr-code__desc">微信：打赏1毛钱！</div></div><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://raw.githubusercontent.com/pymilk/data/master/images/aipay.png"><div class="post-qr-code__desc">支付宝：打赏1毛钱！</div></div></div><div class="social-share"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="prev-post pull-left"><a href="/2018/05/10/efficiency/hugo/blog/搭建个人博客~历程/"><i class="fa fa-chevron-left">  </i><span>搭建个人博客~历程</span></a></div><div class="next-post pull-right"><a href="/2018/04/20/soup/2018/2018/"><span>2018，先来一口鸡汤</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '829d06113861fb4888d1',
+  clientSecret: '976bbcf62e59fa288b9bb3e888bd81bf6059f89a',
+  repo: 'vaporzfy.github.io',
+  owner: 'vaporzfy',
+  admin: 'vaporzfy',
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 By vaporzfy</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.6"></script><script src="/js/fancybox.js?version=1.5.6"></script><script src="/js/sidebar.js?version=1.5.6"></script><script src="/js/copy.js?version=1.5.6"></script><script src="/js/fireworks.js?version=1.5.6"></script><script src="/js/transition.js?version=1.5.6"></script><script src="/js/scroll.js?version=1.5.6"></script><script src="/js/head.js?version=1.5.6"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
