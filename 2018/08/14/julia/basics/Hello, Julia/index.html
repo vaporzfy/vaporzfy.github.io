@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Hello, Julia"><meta name="keywords" content="julia,juno,atom"><meta name="author" content="vaporzfy,undefined"><meta name="copyright" content="vaporzfy"><title>Hello, Julia | vaporzfy's Notes</title><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.5.6"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css?version=1.5.6"><link rel="dns-prefetch" href="https://cdn.staticfile.org"><link rel="dns-prefetch" href="https://cdn.bootcss.com"><link rel="dns-prefetch" href="https://creativecommons.org"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/gh/upupming/gitalk@36368e5dffd049e956cdbbd751ff96c28d8255cf/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4a730a1dbeaefa7cb235a94fc1b70e5d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Julia简介"><span class="toc-text">1. Julia简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Julia安装"><span class="toc-text">2. Julia安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Juno安装"><span class="toc-text">3. Juno安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Hello-World"><span class="toc-text">4. Hello, World</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://raw.githubusercontent.com/pymilk/data/master/images/X.jpg"></div><div class="author-info__name text-center">vaporzfy</div><div class="author-info__description text-center">推动社会经济发展的不是数据，而是数据背后的算法。</div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">12</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">16</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">9</span></a></div></div></div><div id="content-outer"><div class="no-bg" id="top-container" style="background-image: url(true)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">vaporzfy's Notes</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">首页</a><a class="site-page" href="/archives">我的笔记</a><a class="site-page" href="/tags">标签云</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/categories/soup">鸡汤</a><a class="site-page" href="/about">关于我</a></span></div><div id="post-info"><div id="post-title">Hello, Julia</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-14</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/julia/">julia</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/julia/basics/">basics</a><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">489</span><span class="post-meta__separator">|</span><span>阅读时长: 2 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p><strong>请根据笔记的写作日期，选择性阅读。</strong></p>
+<blockquote>
+<p><strong>作者：</strong> <a href="http://vaporzfy.top/">vaporzfy</a><br><strong>写作日期：</strong> 2018-08-14<br><strong>系统：</strong> Mac<br><strong>软件版本：</strong><br><a href="mailto:julia@1.0.0" target="_blank" rel="noopener">julia@1.0.0</a><br><a href="mailto:atom@1.29.0" target="_blank" rel="noopener">atom@1.29.0</a><br><a href="mailto:julia-client@0.7.3" target="_blank" rel="noopener">julia-client@0.7.3</a><br><strong>参考：</strong><br><a href="http://arcade.academy/" target="_blank" rel="noopener">arcade</a><br><strong>分类：</strong> julia &gt; basics</p>
+</blockquote>
+<hr>
+<h2 id="1-Julia简介"><a href="#1-Julia简介" class="headerlink" title="1. Julia简介"></a>1. Julia简介</h2><p>2018.08.12 Julia-v1.0.0发布，据传很厉害的样子，以下摘自官网的解读：</p>
+<ul>
+<li>开源</li>
+<li>它是交互式的，具备可编译性</li>
+<li>拥有 C 的速度</li>
+<li>拥有 Ruby 的灵活</li>
+<li>像 Lisp 这样真正的宏</li>
+<li>有像 Matlab 这样的浅显熟悉的数学符号</li>
+<li>像 Matlab 一样强大的线性代数</li>
+<li>像 Python 一样可用于通用编程</li>
+<li>像 R 一样易于统计</li>
+<li>像 Perl 一样自然地用于字符串处理</li>
+<li>像 shell 一样擅长将程序粘合在一起的语言</li>
+</ul>
+<p>强不强？强不强？  以下是官方介绍的使用场景：</p>
+<img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-use.png">
+<p>强不强，我目前还不知道，不过衷心希望它以后能变强，我只是好奇的尝鲜了一下，暂时还不打算学，以下是Julia的第一个程序。</p>
+<hr>
+<h2 id="2-Julia安装"><a href="#2-Julia安装" class="headerlink" title="2. Julia安装"></a>2. Julia安装</h2><p>使用brew安装</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install julia</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="3-Juno安装"><a href="#3-Juno安装" class="headerlink" title="3. Juno安装"></a>3. Juno安装</h2><p>二进制文件安装完成之后，接下来安装ide，以下是官网介绍的几种ide：</p>
+<img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-ide.png">
+<p>我尝试安装了<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">vscode</a>和<a href="https://atom.io/" target="_blank" rel="noopener">atom</a>的插件，最终在atom下顺利运行。</p>
+<ul>
+<li><p>vscode的julia插件：<a href="https://github.com/JuliaEditorSupport/julia-vscode" target="_blank" rel="noopener">julia</a></p>
+</li>
+<li><p>atom的julia插件：<a href="http://junolab.org/" target="_blank" rel="noopener">juno</a></p>
+</li>
+</ul>
+<p>以下开始介绍juno的安装（已汉化的atom）：</p>
+<ol>
+<li><p>打开atom，点击Atom ▸ 首选项 ▸ 安装</p>
+ <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-client.png">
+</li>
+<li><p>在图中的搜索框中输入“julia”，然后回车，在列出的选项中选择“julia-client”，点击安装</p>
+ <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-client2.png">
+<p> 耐心等待安装完成即可。</p>
+</li>
+</ol>
+<hr>
+<h2 id="4-Hello-World"><a href="#4-Hello-World" class="headerlink" title="4. Hello, World"></a>4. Hello, World</h2><ol>
+<li><p>新建一个文件，命名为hello.jl，使用atom打开，文件内容如下：</p>
+ <figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">println(<span class="string">"Hello, world!"</span>)</span><br><span class="line">println(<span class="number">1</span>+<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>单击菜单栏的julia ▸ Open console ，然后在下侧的终端区，回车，进入Julia。</p>
+ <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-hello1.png">
+ <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-hello2.png">
+</li>
+<li><p>单击菜单栏的julia ▸ Run File ，此时下方的终端区就能看到运行结果。</p>
+ <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-hello3.png">
+ <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-hello4.png">
+</li>
+</ol>
+<p>(完)</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">vaporzfy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://vaporzfy.top/2018/08/14/julia/basics/Hello, Julia/">http://vaporzfy.top/2018/08/14/julia/basics/Hello, Julia/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://vaporzfy.top" target="_blank">vaporzfy's Notes</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/julia/">julia</a><a class="post-meta__tags" href="/tags/juno/">juno</a><a class="post-meta__tags" href="/tags/atom/">atom</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://raw.githubusercontent.com/pymilk/data/master/images/wxpay.png"><div class="post-qr-code__desc">微信：打赏1毛钱！</div></div><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://raw.githubusercontent.com/pymilk/data/master/images/aipay.png"><div class="post-qr-code__desc">支付宝：打赏1毛钱！</div></div></div><div class="social-share"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script><nav id="pagination"><div class="next-post pull-right"><a href="/2018/08/13/python/library/turtle/turtle colorstring/"><span>turtle colorstring</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '829d06113861fb4888d1',
+  clientSecret: '976bbcf62e59fa288b9bb3e888bd81bf6059f89a',
+  repo: 'vaporzfy.github.io',
+  owner: 'vaporzfy',
+  admin: 'vaporzfy',
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2018 By vaporzfy</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="/js/third-party/anime.min.js"></script><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.6"></script><script src="/js/fancybox.js?version=1.5.6"></script><script src="/js/sidebar.js?version=1.5.6"></script><script src="/js/copy.js?version=1.5.6"></script><script src="/js/fireworks.js?version=1.5.6"></script><script src="/js/transition.js?version=1.5.6"></script><script src="/js/scroll.js?version=1.5.6"></script><script src="/js/head.js?version=1.5.6"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/search/local-search.js"></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>

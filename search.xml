@@ -3,6 +3,33 @@
   
     
     <entry>
+      <title>Hello, Julia</title>
+      <link href="/2018/08/14/julia/basics/Hello,%20Julia/"/>
+      <url>/2018/08/14/julia/basics/Hello,%20Julia/</url>
+      <content type="html"><![CDATA[<p><strong>请根据笔记的写作日期，选择性阅读。</strong></p><blockquote><p><strong>作者：</strong> <a href="http://vaporzfy.top/">vaporzfy</a><br><strong>写作日期：</strong> 2018-08-14<br><strong>系统：</strong> Mac<br><strong>软件版本：</strong><br><a href="mailto:julia@1.0.0" target="_blank" rel="noopener">julia@1.0.0</a><br><a href="mailto:atom@1.29.0" target="_blank" rel="noopener">atom@1.29.0</a><br><a href="mailto:julia-client@0.7.3" target="_blank" rel="noopener">julia-client@0.7.3</a><br><strong>参考：</strong><br><a href="http://arcade.academy/" target="_blank" rel="noopener">arcade</a><br><strong>分类：</strong> julia &gt; basics</p></blockquote><hr><h2 id="1-Julia简介"><a href="#1-Julia简介" class="headerlink" title="1. Julia简介"></a>1. Julia简介</h2><p>2018.08.12 Julia-v1.0.0发布，据传很厉害的样子，以下摘自官网的解读：</p><ul><li>开源</li><li>它是交互式的，具备可编译性</li><li>拥有 C 的速度</li><li>拥有 Ruby 的灵活</li><li>像 Lisp 这样真正的宏</li><li>有像 Matlab 这样的浅显熟悉的数学符号</li><li>像 Matlab 一样强大的线性代数</li><li>像 Python 一样可用于通用编程</li><li>像 R 一样易于统计</li><li>像 Perl 一样自然地用于字符串处理</li><li>像 shell 一样擅长将程序粘合在一起的语言</li></ul><p>强不强？强不强？  以下是官方介绍的使用场景：</p><img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-use.png"><p>强不强，我目前还不知道，不过衷心希望它以后能变强，我只是好奇的尝鲜了一下，暂时还不打算学，以下是Julia的第一个程序。</p><hr><h2 id="2-Julia安装"><a href="#2-Julia安装" class="headerlink" title="2. Julia安装"></a>2. Julia安装</h2><p>使用brew安装</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install julia</span><br></pre></td></tr></table></figure><hr><h2 id="3-Juno安装"><a href="#3-Juno安装" class="headerlink" title="3. Juno安装"></a>3. Juno安装</h2><p>二进制文件安装完成之后，接下来安装ide，以下是官网介绍的几种ide：</p><img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-ide.png"><p>我尝试安装了<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">vscode</a>和<a href="https://atom.io/" target="_blank" rel="noopener">atom</a>的插件，最终在atom下顺利运行。</p><ul><li><p>vscode的julia插件：<a href="https://github.com/JuliaEditorSupport/julia-vscode" target="_blank" rel="noopener">julia</a></p></li><li><p>atom的julia插件：<a href="http://junolab.org/" target="_blank" rel="noopener">juno</a></p></li></ul><p>以下开始介绍juno的安装（已汉化的atom）：</p><ol><li><p>打开atom，点击Atom ▸ 首选项 ▸ 安装</p> <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-client.png"></li><li><p>在图中的搜索框中输入“julia”，然后回车，在列出的选项中选择“julia-client”，点击安装</p> <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-client2.png"><p> 耐心等待安装完成即可。</p></li></ol><hr><h2 id="4-Hello-World"><a href="#4-Hello-World" class="headerlink" title="4. Hello, World"></a>4. Hello, World</h2><ol><li><p>新建一个文件，命名为hello.jl，使用atom打开，文件内容如下：</p> <figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">println(<span class="string">"Hello, world!"</span>)</span><br><span class="line">println(<span class="number">1</span>+<span class="number">1</span>)</span><br></pre></td></tr></table></figure></li><li><p>单击菜单栏的julia ▸ Open console ，然后在下侧的终端区，回车，进入Julia。</p> <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-hello1.png"> <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-hello2.png"></li><li><p>单击菜单栏的julia ▸ Run File ，此时下方的终端区就能看到运行结果。</p> <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-hello3.png"> <img src="http://pbontyvwb.bkt.clouddn.com/images/julia/basics/julia-hello4.png"></li></ol><p>(完)</p>]]></content>
+      
+      <categories>
+          
+          <category> julia </category>
+          
+          <category> basics </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> julia </tag>
+            
+            <tag> juno </tag>
+            
+            <tag> atom </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>turtle colorstring</title>
       <link href="/2018/08/13/python/library/turtle/turtle%20colorstring/"/>
       <url>/2018/08/13/python/library/turtle/turtle%20colorstring/</url>
